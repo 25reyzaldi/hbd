@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4f8">
+  <title>For You ♡ — Happy Birthday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader" class="loader">
+    <div class="loader-card">
+      <div class="loader-bear">૮ ˶ᵔ ᵕ ᵔ˶ ა</div>
+      <p>menyiapkan sedikit kejutan...</p>
+      <div class="loader-line"><span></span></div>
+    </div>
+  </div>
+
+  <canvas id="sparkles"></canvas>
+  <div class="grain"></div>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Putar musik">
+    <span class="music-icon">♫</span>
+    <span class="music-text">music</span>
+  </button>
+  <main id="main">
+    <section class="hero section">
+      <div class="cloud cloud-a"></div><div class="cloud cloud-b"></div>
+      <div class="music-reminder">jangan lupa di nyalakan musik nya yaa sayanggg ♡</div>
+      <div class="hero-copy reveal">
+        <span class="tiny-label">a tiny website, made just for you ♡</span>
+        <h1>Happy<br><em>Birthday</em><br><span>sayang.</span></h1>
+        <p class="hero-sub">Hari ini bukan sekadar bertambah usia.<br>Hari ini adalah alasan untuk merayakan <b>kamu.</b></p>
+        <button class="primary-btn" id="startBtn">Buka kejutan <span>→</span></button>
+      </div>
+      <div class="hero-photo reveal">
+        <div class="sticker sticker-star">✦</div>
+        <div class="sticker sticker-heart">♡</div>
+        <div class="photo-frame">
+          <img src="assets/IMG_20260827_192910_322.jpg" alt="Foto orang tersayang">
+          <div class="frame-note">my favorite person<br><small>always & forever</small></div>
+        </div>
+      </div>
+      <div class="scroll-hint">scroll pelan-pelan <span>↓</span></div>
+    </section>
+
+    <section class="intro section">
+      <div class="section-inner narrow reveal">
+        <p class="eyebrow">sebelum semuanya dimulai</p>
+        <h2>Aku punya <span>sesuatu</span><br>untuk kamu.</h2>
+        <p class="body-copy">Aku sengaja membuat halaman kecil ini karena ucapan biasa rasanya terlalu sederhana untuk seseorang yang begitu spesial. Jadi... nikmati sebentar, ya. ♡</p>
+        <div class="scribble">psst... jangan buru-buru di-scroll</div>
+      </div>
+    </section>
+
+    <section class="gallery section">
+      <div class="section-inner">
+        <div class="gallery-heading reveal">
+          <p class="eyebrow">little pieces of you</p>
+          <h2>3 alasan kenapa<br><span>kamu lucu & gemas.</span></h2>
+        </div>
+
+        <div class="memory-grid">
+          <article class="memory-card card-one reveal tilt">
+            <div class="tape"></div>
+            <img src="assets/IMG_20260827_192902_660.jpg" alt="Kenangan pertama">
+            <div class="card-caption"><b>01</b><span>senyum kecil yang bikin hari ikut cerah</span></div>
+          </article>
+
+          <article class="memory-card card-two reveal tilt">
+            <div class="tape tape-right"></div>
+            <img src="assets/IMG_20260827_192910_322.jpg" alt="Kenangan kedua">
+            <div class="card-caption"><b>02</b><span>pap random yang menjadi mood booster</span></div>
+          </article>
+
+          <article class="memory-card card-three reveal tilt">
+            <div class="tape"></div>
+            <img src="assets/IMG_20260908_090407_972.jpg" alt="Kenangan ketiga">
+            <div class="card-caption"><b>03</b><span>dan yaa... kamu memang cantik, lucu, dan seimut itu ♡</span></div>
+          </article>
+        </div>
+
+        <p class="gallery-note">tap foto untuk melihat lebih dekat ✦</p>
+      </div>
+    </section>
+
+    <section class="game section" id="gameSection">
+      <div class="section-inner narrow center reveal">
+        <p class="eyebrow">little game</p>
+        <h2>Cari <span>3 hati</span><br>yang bersembunyi.</h2>
+        <p class="body-copy">Ada tiga hati kecil yang nakal dan bersembunyi di halaman ini. Temukan semuanya untuk membuka pesan rahasia.</p>
+        <div class="heart-field" id="heartField">
+          <span class="hidden-heart h1">♡</span>
+          <span class="hidden-heart h2">♡</span>
+          <span class="hidden-heart h3">♡</span>
+          <div class="game-face">૮ ˶ᵔ ᵕ ᵔ˶ ა<br><small>where are they?</small></div>
+        </div>
+        <div class="game-status"><span id="foundCount">0</span>/3 hati ditemukan</div>
+      </div>
+    </section>
+
+    <section class="letter section" id="letterSection">
+      <div class="section-inner letter-wrap">
+        <div class="envelope reveal" id="envelope">
+          <div class="env-back"></div>
+          <div class="env-letter">
+            <div class="letter-top">for my favorite human ♡</div>
+            <p id="typedLetter"></p>
+            <div class="letter-sign">— seseorang yang selalu mendoakanmu</div>
+          </div>
+          <div class="env-front"></div>
+          <div class="seal">♡</div>
+        </div>
+        <div class="letter-hint">klik amplopnya</div>
+      </div>
+    </section>
+
+    <section class="cake section">
+      <div class="section-inner narrow center reveal">
+        <p class="eyebrow">make a wish</p>
+        <h2>Satu permintaan.<br><span>Satu harapan.</span></h2>
+        <p class="body-copy">Tekan lilinnya satu per satu. Setelah semuanya padam, tutup mata sebentar dan buat permintaan. ✨</p>
+
+        <div class="cake-wrap" id="cake">
+          <div class="flame flame-1" data-candle="1"></div>
+          <div class="flame flame-2" data-candle="2"></div>
+          <div class="flame flame-3" data-candle="3"></div>
+          <div class="candle candle-1" data-candle="1"></div>
+          <div class="candle candle-2" data-candle="2"></div>
+          <div class="candle candle-3" data-candle="3"></div>
+          <div class="cake-top"></div>
+          <div class="cake-body"><span>♡</span><span>♡</span><span>♡</span></div>
+          <div class="cake-plate"></div>
+        </div>
+        <div class="wish-status" id="wishStatus">3 lilin masih menyala ✦</div>
+      </div>
+    </section>
+
+    <section class="final section" id="finalSection">
+      <div class="final-orbit"></div>
+      <div class="section-inner final-inner reveal">
+        <p class="eyebrow">one last thing</p>
+        <div class="final-photo">
+          <img src="assets/IMG_20260827_192902_660.jpg" alt="Foto terakhir">
+          <span class="final-sticker">sayangkuuu ♡</span>
+        </div>
+        <h2>Semoga tahun ini<br><em>lebih baik</em><br>kepada kamu.</h2>
+        <p>Semoga hal-hal baik datang tanpa perlu kamu kejar terlalu jauh. Semoga kamu selalu dikelilingi orang yang tulus dan baik hati kayak aku, lebih sabar lagi ngadepin sifatku yang ga jelas ini, dan tidak mudah marah nanti cepet tua lohhh.</p>
+        <p>kalo ada apa-apa cerita, aduin semua nya ke aku. ♡</p>
+        <div class="final-wish">Happy birthday, sayang. ♡</div>
+        <button class="replay-btn" id="replayBtn">↻ ulangi dari awal</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">×</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
